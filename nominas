@@ -1,0 +1,83 @@
+import java.util.Scanner;//libreriria de texto
+
+public class nominas {
+    public static void main(String[] args) {
+        //delaracion de scaner
+        Scanner opcion = new Scanner(System.in);
+        Scanner presioneenter = new Scanner(System.in);
+        //variable
+        int salariobasico = 125000;
+        int auxilio = 1002854;
+
+        int pension = 40000;//la varible salud y pension se modifica en la operacion de opc 2 a un valor operacional
+        int salud = 40000;//fijo
+        int descuentos = 0;//descuentos pension y tranporte
+
+        int opc = 1;//para los menus
+        String entrada = "";//sacaner tipo caracter
+        int salariototal = 0;//solarito toal
+
+
+        int empleadot = 1;//valor memoria empleao total futuro contator
+        String nombredelempleado = "";//scanner
+        int cs = 1;//otro contador
+
+
+        //introducion al sistema
+
+        System.out.println("bievenido a la empresa XYZ");
+
+// introduciion al menu
+        System.out.println("1=salario menor");
+        System.out.println("2=salario mayor");
+        System.out.println("digite la opcion");
+        opc = opcion.nextInt();
+//declara la condicionala con while para hacer un ciclo
+        while (opc >= 1 && opc <= 2)
+            if (opc == 1) {
+                //entrada = presioneenter.nextLine() guarda el valor para nombres
+                System.out.println("nombre del empleado");
+                entrada = presioneenter.nextLine();
+
+                System.out.println("si cumple la condicion salario menor 1250000" + "digite sueldo:");
+                //guarda valor numerico de salariototal
+                salariototal = opcion.nextInt();
+                //empieza la operacion con el valor dado
+                System.out.println(salariototal + salariobasico - auxilio - salud - pension);
+
+
+                //enter para empleados total
+
+                //imprimio las vaces que ha dado esta opcion
+                System.out.println("total de empleadoo");
+                empleadot = cs++;//contador de las vece que ingreso al menu  para los empleados
+                System.out.println(empleadot);//imprime lo anterior
+                System.out.println("digite opcion");
+
+//leer opcion
+                opc = opcion.nextInt();
+//leer opcion
+            } else if (opc == 2) {//camino dos mayo
+                System.out.println("nombre del empleado");
+                entrada = presioneenter.nextLine();//guarda el nombre
+                System.out.println("si cumple la condicio de sueldo mayoor a 2500000" + "digite el sueldo");
+               //guarda el alario
+                salariototal = opcion.nextInt();
+                System.out.println("total es");
+                //hace operacion
+                System.out.print(salariototal + salariobasico + auxilio - 100000 - 1000000);
+               //imprime resultado
+                System.out.println(salariototal);
+
+//otrocontador
+                
+                System.out.println("total de empleadoo");
+                empleadot = cs++;
+                System.out.println(empleadot);
+                System.out.println("digite opcion");
+
+            }
+
+
+    }
+    }
